@@ -63,57 +63,58 @@ const questions = [
       { text: "สบายๆ ไม่ซีเรียส", type: "omega" },
       { text: "รักอิสระ ไม่ยึดติด", type: "sigma" }
     ]
-  }{
-  question: "เวลาคุณอยู่ในกลุ่มเพื่อน คุณมักเป็นคนแบบไหน?",
-  answers: [
-    { text: "คนตัดสินใจ / นำทีม", type: "alpha" },
-    { text: "คนคอยซัพพอร์ตเพื่อน", type: "beta" },
-    { text: "คนเงียบๆ ฟังมากกว่าพูด", type: "omega" },
-    { text: "คนแยกตัว แต่ยังคุมเกมได้", type: "sigma" }
-  ]
-},
-{
-  question: "คุณรับมือกับความกดดันยังไง?",
-  answers: [
-    { text: "ลุยตรงๆ ไม่ถอย", type: "alpha" },
-    { text: "ขอคำแนะนำจากคนที่ไว้ใจ", type: "beta" },
-    { text: "พักก่อน ค่อยคิดทีหลัง", type: "omega" },
-    { text: "วิเคราะห์เงียบๆ แล้วหาทางเอง", type: "sigma" }
-  ]
-},
-{
-  question: "สไตล์ความรักของคุณ?",
-  answers: [
-    { text: "เป็นผู้นำในความสัมพันธ์", type: "alpha" },
-    { text: "ดูแล เอาใจใส่คู่รัก", type: "beta" },
-    { text: "ปล่อยสบาย ไม่ยึดติด", type: "omega" },
-    { text: "รักอิสระ แต่ลึกซึ้ง", type: "sigma" }
-  ]
-},
-{
-  question: "คุณมองความสำเร็จว่าอะไรสำคัญที่สุด?",
-  answers: [
-    { text: "อำนาจ และการควบคุม", type: "alpha" },
-    { text: "ความสัมพันธ์ที่ดี", type: "beta" },
-    { text: "ความสุขส่วนตัว", type: "omega" },
-    { text: "อิสระในการใช้ชีวิต", type: "sigma" }
-  ]
-},
-{
-  question: "ถ้ามีคนไม่ชอบคุณ คุณจะทำยังไง?",
-  answers: [
-    { text: "ไม่สน และเดินหน้าต่อ", type: "alpha" },
-    { text: "พยายามปรับตัวเข้าหา", type: "beta" },
-    { text: "รู้สึกนิดหน่อย แต่ปล่อยผ่าน", type: "omega" },
-    { text: "เฉยๆ ไม่แคร์ความคิดเห็นใคร", type: "sigma" }
-  ]
-}
+  },
+  {
+    question: "เวลาคุณอยู่ในกลุ่มเพื่อน คุณมักเป็นคนแบบไหน?",
+    answers: [
+      { text: "คนตัดสินใจ / นำทีม", type: "alpha" },
+      { text: "คนคอยซัพพอร์ตเพื่อน", type: "beta" },
+      { text: "คนเงียบๆ ฟังมากกว่าพูด", type: "omega" },
+      { text: "คนแยกตัว แต่ยังคุมเกมได้", type: "sigma" }
+    ]
+  },
+  {
+    question: "คุณรับมือกับความกดดันยังไง?",
+    answers: [
+      { text: "ลุยตรงๆ ไม่ถอย", type: "alpha" },
+      { text: "ขอคำแนะนำจากคนที่ไว้ใจ", type: "beta" },
+      { text: "พักก่อน ค่อยคิดทีหลัง", type: "omega" },
+      { text: "วิเคราะห์เงียบๆ แล้วหาทางเอง", type: "sigma" }
+    ]
+  },
+  {
+    question: "สไตล์ความรักของคุณ?",
+    answers: [
+      { text: "เป็นผู้นำในความสัมพันธ์", type: "alpha" },
+      { text: "ดูแล เอาใจใส่คู่รัก", type: "beta" },
+      { text: "ปล่อยสบาย ไม่ยึดติด", type: "omega" },
+      { text: "รักอิสระ แต่ลึกซึ้ง", type: "sigma" }
+    ]
+  },
+  {
+    question: "คุณมองความสำเร็จว่าอะไรสำคัญที่สุด?",
+    answers: [
+      { text: "อำนาจ และการควบคุม", type: "alpha" },
+      { text: "ความสัมพันธ์ที่ดี", type: "beta" },
+      { text: "ความสุขส่วนตัว", type: "omega" },
+      { text: "อิสระในการใช้ชีวิต", type: "sigma" }
+    ]
+  },
+  {
+    question: "ถ้ามีคนไม่ชอบคุณ คุณจะทำยังไง?",
+    answers: [
+      { text: "ไม่สน และเดินหน้าต่อ", type: "alpha" },
+      { text: "พยายามปรับตัวเข้าหา", type: "beta" },
+      { text: "รู้สึกนิดหน่อย แต่ปล่อยผ่าน", type: "omega" },
+      { text: "เฉยๆ ไม่แคร์ความคิดเห็นใคร", type: "sigma" }
+    ]
+  }
 ];
 
 function loadQuiz() {
   const quizDiv = document.getElementById("quiz");
 
-  questions.forEach((q, index) => {
+  questions.forEach((q) => {
     const div = document.createElement("div");
     div.innerHTML = `<h3>${q.question}</h3>`;
 
@@ -150,4 +151,5 @@ loadQuiz();
 </script>
 
 </body>
+</html>
 </html>
